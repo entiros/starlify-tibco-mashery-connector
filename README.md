@@ -1,40 +1,43 @@
-# Starlify connector for Tibco Mashery api gateway
-Exports the api details to starlify as Service, Sysytem and Flow.
+# Starlify connector for Tibco Mashery API Gateway
+Exports the API details to Starlify as systems and services.
 
 ## Dependencies
    1. Java-8 +
+   2. Maven
    
 ### spring-boot-starter-web
 For exposure of connector etc. on http.
 
 ## Configuration
-Make sure proper Tibco Mashery api gateway and starlify url's configured properly in properties file like this
+Put the text below in your property file to configure your URL for Tibco Mashery API Gateway and Starlify:
 
 ```
-		mashrey:
-		  server:
-			url: http://localhost:8001
-		starlify:
-		  url: https://api.starlify.com
+mashrey:
+	server:
+		url: http://localhost:8001
+starlify:
+		url: https://api.starlify.com
 ```
  
 ## Start
-First clone the project using below link
-     https://github.com/entiros/starlify-tibco-mashery-connector.git
+Start by cloning the project by using the link below:  
+https://github.com/entiros/starlify-tibco-mashery-connector.git
 
-Go to cleaned location and run below command to start the process
-	mvn clean spring-boot:run
+Go to cloned location and run the command below to start the process:
+```
+mvn clean spring-boot:run
+```
 
-## import kong api details to Starlify
-Use below endpoint to start importing api details to starlify as services, systems and flows 
+## Import Tibco Mashery API Gateway details to Starlify
+Put the text below in your property file to configure your URL for Mulesoft Anypoint Platform API Gateway and Starlify:
 
 ```
-	Method : POST
-	URL : http://localhost:8080/submitRequest
-	Body : 
-			{
-				"starlifyKey":"starlify-api-key",
-				"apiKey":"tibco-mashery-api-key",
-				"networkId":"starlify-network-id-to-create-services-systems-and-flows"
-			}
+Method : POST
+URL : http://localhost:8080/submitRequest
+Body : 
+	{
+		"starlifyKey":"starlify-api-key",
+		"apiKey":"tibco-mashery-api-key",
+		"networkId":"starlify-network-id-to-create-services-systems-and-flows"
+	}
 ```
