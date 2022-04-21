@@ -29,7 +29,7 @@ mvn clean spring-boot:run
 ```
 
 ## Import Tibco Mashery API Gateway details to Starlify
-Put the text below in your property file to configure your URL for Mulesoft Anypoint Platform API Gateway and Starlify:
+Use the endpoint below to start importing API details to Starlify as systems and services.
 
 ```
 Method : POST
